@@ -1,4 +1,4 @@
-package restservice;
+package com.werth.web;
 
 //RESOURCE REPRESENTATION CLASS
 
