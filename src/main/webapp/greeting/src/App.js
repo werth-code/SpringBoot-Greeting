@@ -1,21 +1,25 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css';
 import axios from 'axios'
-import NavigationBar from './components/NavigationBar'
 
 const Greeting = () => {
 
+  const [greeting, setGreeting] = useState([])
+
   const fetchGreeting = () => {
-    axios.get("http://localhost:8081/greeting").then(res=> {
+    axios.get("http://localhost:8081/greeting").then(res => {
       console.log(res);
+      setGreeting(res.data)
     })
   }
 
-  useEffect(()=> {
+  useEffect(() => {
     fetchGreeting()
   }, [])
 
-  return <h1>Hello</h1>
+const data = greeting.content;
+
+return <h1>{data}</h1>;
 }
 
 function App() {
