@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
-@CrossOrigin("*") // TODO: 12/27/20 testing.. change for production 
+@CrossOrigin("*") // TODO: 12/27/20 testing.. change for production
 public class GreetingController {
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
